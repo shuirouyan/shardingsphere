@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author kangchen
  * @date 2022/8/19 22:13
@@ -34,5 +36,11 @@ public class TestController {
         Order save = orderDao.save(order);
         log.info("save:{}", save);
         return HttpStatus.OK;
+    }
+
+    @GetMapping("/find")
+    public List<Order> findAllOrderMethod() {
+        List<Order> all = orderDao.findAll();
+        return all;
     }
 }
