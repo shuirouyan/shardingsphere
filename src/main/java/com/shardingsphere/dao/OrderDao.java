@@ -2,7 +2,6 @@ package com.shardingsphere.dao;
 
 import com.shardingsphere.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author kangchen

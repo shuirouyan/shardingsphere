@@ -2,8 +2,6 @@ package com.shardingsphere.dao;
 
 import com.shardingsphere.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 /**
  * @author kangchen
@@ -11,5 +9,6 @@ import org.springframework.stereotype.Repository;
  */
 //@Repository
 public interface UserDao extends JpaRepository<User, Long> {
+
     User findByUserId(Long userId);
 }

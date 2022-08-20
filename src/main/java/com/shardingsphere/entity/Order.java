@@ -19,9 +19,10 @@ import java.io.Serializable;
 @Entity
 @Table(name = "t_order")
 public class Order implements Serializable {
+    private static final long serialVersionUID = 1842314184628993372L;
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
     private Integer itemId;

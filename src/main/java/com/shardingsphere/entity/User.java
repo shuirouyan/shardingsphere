@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author kangchen
@@ -17,9 +18,10 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "t_user")
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = -6018129966549983371L;
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     private Integer age;
