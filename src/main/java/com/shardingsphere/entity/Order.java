@@ -21,7 +21,7 @@ import java.io.Serializable;
 public class Order implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
     private Integer itemId;
