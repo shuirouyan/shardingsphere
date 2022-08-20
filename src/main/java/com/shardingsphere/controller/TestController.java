@@ -3,6 +3,7 @@ package com.shardingsphere.controller;
 import com.shardingsphere.dao.OrderDao;
 import com.shardingsphere.dao.UserDao;
 import com.shardingsphere.entity.Order;
+import com.shardingsphere.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,6 @@ public class TestController {
     public HttpStatus addOrderMethod() {
         Order order = new Order();
         order.setItemId(12);
-        order.setOrderId(System.currentTimeMillis());
         Order save = orderDao.save(order);
         log.info("save:{}", save);
         return HttpStatus.OK;
@@ -41,6 +41,12 @@ public class TestController {
     @GetMapping("/find")
     public List<Order> findAllOrderMethod() {
         List<Order> all = orderDao.findAll();
+        return all;
+    }
+
+    @GetMapping("/user/find")
+    public List<User> findAllUserMethod() {
+        List<User> all = userDao.findAll();
         return all;
     }
 }

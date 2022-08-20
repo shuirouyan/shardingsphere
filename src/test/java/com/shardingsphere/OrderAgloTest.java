@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 @Slf4j
 @RunWith(SpringRunner.class)
-@SpringBootTest(args = {"--spring.profiles.active=dev"})
+@SpringBootTest/*(args = {"--spring.profiles.active=dev"})*/
 public class OrderAgloTest {
 
     @Autowired
@@ -29,7 +29,7 @@ public class OrderAgloTest {
 
     @Test
     public void orderTest01() {
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 90; i++) {
             Order order = new Order();
             // order.setOrderId();
             order.setItemId(ThreadLocalRandom.current().nextInt(500));
@@ -40,7 +40,7 @@ public class OrderAgloTest {
 
     @Test
     public void userTest01() {
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 80; i++) {
             User user = new User();
             user.setAge(ThreadLocalRandom.current().nextInt(120));
             User save = userDao.save(user);
