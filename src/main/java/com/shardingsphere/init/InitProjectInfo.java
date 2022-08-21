@@ -48,9 +48,9 @@ public class InitProjectInfo implements CommandLineRunner {
             for (int i = 1; i <= 100; i++) {
                 User user = new User();
                 user.setAge(ThreadLocalRandom.current().nextInt(100));
-                User save = userDao.save(user);
-                list.add(save);
+                list.add(user);
             }
+            list = userDao.saveAll(list);
             log.info("user list:{}", list);
             log.info("init user data success...");
         } else {
