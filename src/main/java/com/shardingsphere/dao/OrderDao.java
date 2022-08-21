@@ -1,6 +1,7 @@
 package com.shardingsphere.dao;
 
 import com.shardingsphere.entity.Order;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
